@@ -1,66 +1,109 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+/* General styles */
+body.bg-dark-gray {
+    background-color: #2c3e50 !important; /* Dark gray-blue background for body */
+    color: #fff; /* White text for readability */
+    font-family: 'Arial', sans-serif;
 }
 
-h1 {
-    color: #333;
-}
-
-form {
-    margin-bottom: 20px;
-}
-
-textarea {
-    width: 100%;
-    height: 100px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+/* Card and container styles */
+.card.bg-dark-gray {
+    background-color: #34495e !important; /* Lighter gray-blue for cards */
     border: none;
-    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
+/* Text and label styles */
+.text-white {
+    color: #fff !important;
 }
 
-button:hover {
-    background-color: #0056b3;
+.form-label.fw-bold {
+    color: #ecf0f1 !important; /* Light gray for labels */
 }
 
-/* Loading Spinner Styles */
-.loading-spinner {
-    display: none; /* Hidden by default */
-    border: 4px solid #f3f3f3; /* Light grey */
-    border-top: 4px solid #007BFF; /* Blue */
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
+/* Input and select styles */
+.form-control.bg-light-gray,
+.form-select.bg-light-gray {
+    background-color: #465c71 !important; /* Pale gray-blue for inputs and selects */
+    border: 1px solid #5d6d7e !important;
+    color: #fff !important;
+    box-shadow: none;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.form-control.bg-light-gray:focus,
+.form-select.bg-light-gray:focus {
+    background-color: #465c71 !important;
+    border-color: #3498db !important; /* Blue border on focus */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5) !important;
+    color: #fff !important;
 }
 
-/* Green Toggle Button Styles */
-.toggle-button {
-    padding: 10px 20px;
-    background-color: #34abe2;
-    color: rgb(197, 195, 195);
-    border: 2px solid #48aad1;
-    cursor: pointer;
-    margin-left: 10px;
+/* Button styles */
+.btn-blue {
+    background-color: #3498db !important; /* Bright blue for Short Storage */
+    border: none !important;
+    color: #fff !important;
 }
 
-.toggle-button:hover {
-    background-color: #218838;
+.btn-blue:hover {
+    background-color: #2980b9 !important; /* Darker blue on hover */
+}
+
+.btn-green {
+    background-color: #2ecc71 !important; /* Green for Long Storage */
+    border: none !important;
+    color: #fff !important;
+}
+
+.btn-green:hover {
+    background-color: #27ae60 !important; /* Darker green on hover */
+}
+
+.btn-light-gray {
+    background-color: #7f8c8d !important; /* Light gray for toggle button */
+    border: none !important;
+    color: #fff !important;
+}
+
+.btn-light-gray:hover {
+    background-color: #6c757d !important; /* Darker gray on hover */
+}
+
+/* Audio player styles */
+audio {
+    background-color: #465c71 !important; /* Pale gray-blue for audio player */
+    border-radius: 5px;
+}
+
+/* Spinner styles */
+.spinner-border.text-blue {
+    border-color: #3498db !important;
+    border-right-color: transparent !important;
+}
+
+/* Container overlay for readability */
+.container {
+    background-color: rgba(52, 73, 94, 0.9) !important; /* Semi-transparent gray-blue */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Width adjustment for dropdowns */
+.w-45 {
+    width: 45% !important;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .w-45 {
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+    .d-flex.align-items-center.justify-content-between {
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .mx-2 {
+        display: none !important; /* Hide "to" on mobile */
+    }
 }
